@@ -18,6 +18,7 @@ final class PageControlView: UIView {
     // MARK: - UI
     var delegate: PageControlViewDelegate?
     var labels = ["ABV \n Teor Alcoólico em Volume. Representa a porcentagem de álcool presente na cerveja em relação ao volume total.", "IBU  \n Unidades Internacionais de Amargor. O IBU mede a quantidade de amargor presente na cerveja. Quanto maior o número de IBU, mais amarga será a cerveja.", "EBC \n Convenção Europeia de Cervejarias. O EBC é uma unidade de medida utilizada para determinar a cor da cerveja. Quanto maior o número de EBC, mais escura será a cerveja."]
+    var timer: Timer?
     
     private lazy var backgroundImage: UIImageView = {
         let imageView = UIImageView()
@@ -57,12 +58,9 @@ final class PageControlView: UIView {
     
     lazy var startIcon: UIButton = {
         let button = UIButton(type: .custom)
-//        button.setTitle("Let's start", for: .normal)
         button.backgroundColor = UIColor(hexString: "#FDAF19")
         button.layer.cornerRadius = 10
-//        button.layer.maskedCorners = [ .layerMaxXMinYCorner, .layerMinXMaxYCorner]
         button.layer.masksToBounds = false
-//        button.setImage(.init(systemName: "chevron.left"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.tintColor = .white
         button.layer.masksToBounds = true
@@ -82,8 +80,7 @@ final class PageControlView: UIView {
         attributedString.append(NSAttributedString(attachment: imageAttachment))
         
         button.setAttributedTitle(attributedString, for: .normal)
-//        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        
+
         return button
     }()
 
@@ -110,7 +107,30 @@ final class PageControlView: UIView {
     @objc func tappedPageControl(_ sender: UIPageControl){
         labelsCollectionView.scrollToItem(at: IndexPath(row: sender.currentPage, section: 0), at: .centeredHorizontally, animated: true)
     }
-
+    
+    func startTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(scrollAutomatically), userInfo: nil, repeats: true)
+    }
+    
+    @objc func scrollAutomatically(_ timer1: Timer) {
+        for cell in labelsCollectionView.visibleCells {
+            if labels.count == 1 {
+                return
+            }
+            let indexPath = labelsCollectionView.indexPath(for: cell)
+            if indexPath?.row ?? 0 < (labels.count - 1) {
+                let indexPath1 = IndexPath.init(row: (indexPath?.row ?? 0) + 1, section: indexPath?.section ?? 0)
+                labelsCollectionView.scrollToItem(at: indexPath1, at: .right, animated: true)
+               pageControl.currentPage = indexPath1.row
+            }
+            else {
+                let indexPath1 = IndexPath.init(row: 0, section: indexPath?.section ?? 0)
+                labelsCollectionView.scrollToItem(at: indexPath1, at: .left, animated: true)
+                pageControl.currentPage = indexPath1.row
+            }
+        }
+    }
+    
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             backgroundImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),

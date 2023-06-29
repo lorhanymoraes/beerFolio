@@ -13,6 +13,7 @@ final class PageViewController: BaseViewController {
     var viewModel: PageViewModelProtocol?
     private var viewInstance: PageControlView?
     
+    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
@@ -23,7 +24,7 @@ final class PageViewController: BaseViewController {
         navigationController?.navigationBar.isHidden = true
         setupCollectionView()
         viewModel?.viewDidLoad()
-        
+        viewInstance?.startTimer()
     }
     
     override func loadView() {
@@ -44,7 +45,7 @@ final class PageViewController: BaseViewController {
 }
 
 extension PageViewController: PageControlViewDelegate {
-
+    
 }
 
 extension PageViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -67,4 +68,4 @@ extension PageViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let visiblePath = viewInstance?.labelsCollectionView.indexPathForItem(at: visiblePoint)
         viewInstance?.pageControl.currentPage = visiblePath?.row ?? 1
     }
-    }
+}
