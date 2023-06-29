@@ -20,6 +20,7 @@ final class FakeSplashScreenViewModel: NSObject, FakeSplashScreenViewModelProtoc
     }
     
     func viewDidLoad() {
+        BeerCoordinator().changeToPageControl()
 //        if ServiceLocator.shared.userSettings.token.value != nil {
 //            OrionCoordinator().changeToTabBar()
 //        } else {
