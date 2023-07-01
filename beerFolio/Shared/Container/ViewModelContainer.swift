@@ -16,7 +16,7 @@ class ViewModelContainer {
         return .init(router: view.router)
     }
     
-    func getPageControlViewModel(view: BaseViewController) -> PageViewModel {
+    func getPageControlViewModel(view: BaseViewController) -> FirstScreenViewModel {
         return .init(router: view.router)
     }
     

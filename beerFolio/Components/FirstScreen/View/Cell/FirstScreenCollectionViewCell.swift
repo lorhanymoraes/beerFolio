@@ -1,13 +1,14 @@
 //
-//  PageCollectionViewCell.swift
+//  FirstScreenCollectionViewCell.swift
 //  beerFolio
 //
-//  Created by Lorhany Moraes on 28/06/23.
+//  Created by Lorhany Moraes on 30/06/23.
 //
 
+import Foundation
 import UIKit
 
-class PageCollectionViewCell: UICollectionViewCell {
+class FirstScreenCollectionViewCell: UICollectionViewCell {
     
    lazy var infoLabel: UILabel = {
         let label = UILabel()

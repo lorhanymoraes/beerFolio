@@ -1,23 +1,21 @@
 //
-//  PageControlView.swift
+//  FirstScreenView.swift
 //  beerFolio
 //
-//  Created by Lorhany Moraes on 28/06/23.
+//  Created by Lorhany Moraes on 30/06/23.
 //
 
+import Foundation
 import UIKit
 import SwiftUI
 
-protocol PageControlViewDelegate {
-
+protocol FirstScreenViewDelegate {
+    func changeLabels()
 }
 
-final class PageControlView: UIView {
-    // MARK: - Class properties
+final class FirstScreenView: UIView {
     
-    // MARK: - UI
-    var delegate: PageControlViewDelegate?
-    var labels = ["ABV \n Teor Alcoólico em Volume. Representa a porcentagem de álcool presente na cerveja em relação ao volume total.", "IBU  \n Unidades Internacionais de Amargor. O IBU mede a quantidade de amargor presente na cerveja. Quanto maior o número de IBU, mais amarga será a cerveja.", "EBC \n Convenção Europeia de Cervejarias. O EBC é uma unidade de medida utilizada para determinar a cor da cerveja. Quanto maior o número de EBC, mais escura será a cerveja."]
+    var delegate: FirstScreenViewDelegate?
     var timer: Timer?
     
     private lazy var backgroundImage: UIImageView = {
@@ -47,7 +45,7 @@ final class PageControlView: UIView {
         
         let collectionView = UICollectionView(frame: .init(origin: self.center, size: .init(width: UIScreen.main.bounds.size.width, height: 200)), collectionViewLayout: layout)
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.register(PageCollectionViewCell.self, forCellWithReuseIdentifier: PageCollectionViewCell.getReuseIdentifier())
+        collectionView.register(FirstScreenCollectionViewCell.self, forCellWithReuseIdentifier: FirstScreenCollectionViewCell.getReuseIdentifier())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.isUserInteractionEnabled = true
         collectionView.isScrollEnabled = true
@@ -109,26 +107,11 @@ final class PageControlView: UIView {
     }
     
     func startTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(scrollAutomatically), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(scrollAutomatically), userInfo: nil, repeats: true)
     }
     
     @objc func scrollAutomatically(_ timer1: Timer) {
-        for cell in labelsCollectionView.visibleCells {
-            if labels.count == 1 {
-                return
-            }
-            let indexPath = labelsCollectionView.indexPath(for: cell)
-            if indexPath?.row ?? 0 < (labels.count - 1) {
-                let indexPath1 = IndexPath.init(row: (indexPath?.row ?? 0) + 1, section: indexPath?.section ?? 0)
-                labelsCollectionView.scrollToItem(at: indexPath1, at: .right, animated: true)
-               pageControl.currentPage = indexPath1.row
-            }
-            else {
-                let indexPath1 = IndexPath.init(row: 0, section: indexPath?.section ?? 0)
-                labelsCollectionView.scrollToItem(at: indexPath1, at: .left, animated: true)
-                pageControl.currentPage = indexPath1.row
-            }
-        }
+        delegate?.changeLabels()
     }
     
     private func setupConstraints() {
@@ -154,10 +137,10 @@ final class PageControlView: UIView {
     }
 }
 
-struct PageControlView_Previews: PreviewProvider {
+struct FirstScreenView_Previews: PreviewProvider {
     static var previews: some View {
         ViewPreview {
-            PageControlView()
+            FirstScreenView()
         }
     }
 }

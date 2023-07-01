@@ -34,8 +34,8 @@ final class BeerCoordinator {
     
     func changeToPageControl() {
         let animated = self.window != nil
-        let viewController = PageViewController()
-//        viewController.viewModel = ViewModelContainer.shared.getLoginViewModel(view: viewController)
+        let viewController = FirstScreenViewController()
+        viewController.viewModel = ViewModelContainer.shared.getPageControlViewModel(view: viewController)
         let navigationController = UINavigationController(rootViewController: viewController)
         self.switchRootViewController(rootViewController: navigationController, animated: animated, completion: nil)
     }
