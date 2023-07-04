@@ -32,13 +32,13 @@ final class BeerCoordinator {
         switchRootViewController(rootViewController: navigationController, animated: animated, completion: nil)
     }
     
-//    func changeToLogin() {
-//        let animated = self.window != nil
-//        let viewController = LoginViewController()
-//        viewController.viewModel = ViewModelContainer.shared.getLoginViewModel(view: viewController)
-//        let navigationController = UINavigationController(rootViewController: viewController)
-//        self.switchRootViewController(rootViewController: navigationController, animated: animated, completion: nil)
-//    }
+    func changeToPageControl() {
+        let animated = self.window != nil
+        let viewController = FirstScreenViewController()
+        viewController.viewModel = ViewModelContainer.shared.getPageControlViewModel(view: viewController)
+        let navigationController = UINavigationController(rootViewController: viewController)
+        self.switchRootViewController(rootViewController: navigationController, animated: animated, completion: nil)
+    }
 //    
 //    func changeToTabBar() {
 //        let animated = self.window != nil

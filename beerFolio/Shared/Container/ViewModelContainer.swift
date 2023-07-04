@@ -15,7 +15,11 @@ class ViewModelContainer {
     func getSplashScreenViewModel(view: BaseViewController) -> FakeSplashScreenViewModel {
         return .init(router: view.router)
     }
-//    
+    
+    func getPageControlViewModel(view: BaseViewController) -> FirstScreenViewModel {
+        return .init(router: view.router)
+    }
+    
 //    func getLoginViewModel(view: BaseViewController) -> LoginViewModel {
 //        return .init(router: view.router, services: LoginServices())
 //    }
