@@ -47,6 +47,10 @@
 		0D4D82ED2A4A4FB10062EFCB /* FakeSplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4D82EC2A4A4FB10062EFCB /* FakeSplashScreenView.swift */; };
 		0D4D82EF2A4A4FBB0062EFCB /* FakeSplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4D82EE2A4A4FBB0062EFCB /* FakeSplashScreenViewModel.swift */; };
 		0D4D82F32A4A57650062EFCB /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4D82F22A4A57650062EFCB /* UserSettings.swift */; };
+		0D4D832D2A4FADF90062EFCB /* FirstScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4D832C2A4FADF90062EFCB /* FirstScreenViewModel.swift */; };
+		0D4D832F2A4FAE030062EFCB /* FirstScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4D832E2A4FAE030062EFCB /* FirstScreenView.swift */; };
+		0D4D83312A4FAE0E0062EFCB /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4D83302A4FAE0E0062EFCB /* FirstScreenViewController.swift */; };
+		0D4D83342A4FAE2B0062EFCB /* FirstScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4D83332A4FAE2B0062EFCB /* FirstScreenCollectionViewCell.swift */; };
 		B3CBD1169BF7ECF4A2B010BC /* Pods_beerFolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A09B81929BEBE0860D78D6 /* Pods_beerFolio.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +97,10 @@
 		0D4D82EC2A4A4FB10062EFCB /* FakeSplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeSplashScreenView.swift; sourceTree = "<group>"; };
 		0D4D82EE2A4A4FBB0062EFCB /* FakeSplashScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeSplashScreenViewModel.swift; sourceTree = "<group>"; };
 		0D4D82F22A4A57650062EFCB /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		0D4D832C2A4FADF90062EFCB /* FirstScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewModel.swift; sourceTree = "<group>"; };
+		0D4D832E2A4FAE030062EFCB /* FirstScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenView.swift; sourceTree = "<group>"; };
+		0D4D83302A4FAE0E0062EFCB /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
+		0D4D83332A4FAE2B0062EFCB /* FirstScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		80A09B81929BEBE0860D78D6 /* Pods_beerFolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beerFolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B3952BE64AEF7B7D803905 /* Pods-beerFolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beerFolio.debug.xcconfig"; path = "Target Support Files/Pods-beerFolio/Pods-beerFolio.debug.xcconfig"; sourceTree = "<group>"; };
 		E140490B9FE729F61C5179B7 /* Pods-beerFolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beerFolio.release.xcconfig"; path = "Target Support Files/Pods-beerFolio/Pods-beerFolio.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +175,7 @@
 		0D4D82902A4A47580062EFCB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0D4D83282A4FADB70062EFCB /* FirstScreen */,
 				0D4D82E92A4A4F740062EFCB /* FakeSplashScreen */,
 			);
 			path = Components;
@@ -401,6 +410,49 @@
 			path = UserSettings;
 			sourceTree = "<group>";
 		};
+		0D4D83282A4FADB70062EFCB /* FirstScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0D4D832B2A4FADE70062EFCB /* ViewController */,
+				0D4D832A2A4FADDF0062EFCB /* View */,
+				0D4D83292A4FADCE0062EFCB /* ViewModel */,
+			);
+			path = FirstScreen;
+			sourceTree = "<group>";
+		};
+		0D4D83292A4FADCE0062EFCB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0D4D832C2A4FADF90062EFCB /* FirstScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0D4D832A2A4FADDF0062EFCB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D4D832E2A4FAE030062EFCB /* FirstScreenView.swift */,
+				0D4D83322A4FAE130062EFCB /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0D4D832B2A4FADE70062EFCB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0D4D83302A4FAE0E0062EFCB /* FirstScreenViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0D4D83322A4FAE130062EFCB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0D4D83332A4FAE2B0062EFCB /* FirstScreenCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		50BC7F6368BCD2011FCFD852 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -532,6 +584,7 @@
 				0D4D82D92A4A4D750062EFCB /* EmptyResponse.swift in Sources */,
 				0D4D82ED2A4A4FB10062EFCB /* FakeSplashScreenView.swift in Sources */,
 				0D4D82A82A4A4A0C0062EFCB /* Strings+Extensions.swift in Sources */,
+				0D4D832F2A4FAE030062EFCB /* FirstScreenView.swift in Sources */,
 				0D4D82F32A4A57650062EFCB /* UserSettings.swift in Sources */,
 				0D4D82DD2A4A4D860062EFCB /* Endpoint.swift in Sources */,
 				0D4D82E02A4A4DE50062EFCB /* Router.swift in Sources */,
@@ -550,9 +603,12 @@
 				0D4D82DB2A4A4D800062EFCB /* BeerError.swift in Sources */,
 				0D4D82E32A4A4E190062EFCB /* RouterProtocol.swift in Sources */,
 				0D4D82BC2A4A4B850062EFCB /* CacheManager.swift in Sources */,
+				0D4D832D2A4FADF90062EFCB /* FirstScreenViewModel.swift in Sources */,
 				0D4D82B52A4A4ABA0062EFCB /* BeerConstants.swift in Sources */,
 				0D4D82EB2A4A4FA40062EFCB /* FakeSplashScreenViewController.swift in Sources */,
+				0D4D83312A4FAE0E0062EFCB /* FirstScreenViewController.swift in Sources */,
 				0D4D82AC2A4A4A2C0062EFCB /* UIColor+Extensions.swift in Sources */,
+				0D4D83342A4FAE2B0062EFCB /* FirstScreenCollectionViewCell.swift in Sources */,
 				0D4D82AA2A4A4A230062EFCB /* UITableViewCell+Extensions.swift in Sources */,
 				0D4D827E2A4A46BF0062EFCB /* SceneDelegate.swift in Sources */,
 				0D4D82CC2A4A4CA20062EFCB /* AllBeersEndpoint.swift in Sources */,
