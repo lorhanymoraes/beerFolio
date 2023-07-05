@@ -20,6 +20,8 @@ final class BeersScreensViewModel: NSObject, BeersScreensViewModelProtocol {
     private let services: BeersScreenServiceProtocol
     
     private var options: [String] = ["Financeiro - Resumo", "Financeiro - Resultado"]
+    
+    var allBeers: BeersModel?
    
     init(router: RouterProtocol, services: BeersScreenServiceProtocol) {
         self.router = router
@@ -27,9 +29,23 @@ final class BeersScreensViewModel: NSObject, BeersScreensViewModelProtocol {
     }
     
     func viewDidLoad() {
+        getAllBeers()
     }
     
+    func getAllBeers() {
+        services.getAllBeers { result in
+            switch result {
+            case .success(let success):
+                self.allBeers = success
+//                self.reloadResult.value = true
+                print(success)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }
+
 
 extension BeersScreensViewModel {
     

@@ -8,7 +8,7 @@
 import Moya
 
 enum AllBeersEndpoint {
-    case authenticate(user: String, password: String, empID: String)
+    case getAllBeers
 }
 
 // MARK: - Endpoint Builder
@@ -17,39 +17,22 @@ extension AllBeersEndpoint: Endpoint {
 
     var path: String {
         switch self {
-        case .authenticate:
-            return "/Posseidom/Sistema/DPSistemas.WS/v1/api.asmx/AutenticarJSON"
+        case .getAllBeers:
+            return "beers"
         }
     }
 
     var method: Moya.Method {
         switch self {
-        case .authenticate:
-            return .post
-        }
-    }
-
-    var requiresLogin: Bool {
-        return false
-    }
-    
-    var headers: [String : String]? {
-        switch self {
-        case .authenticate:
-            return [
-                "Content-Type": "application/x-www-form-urlencoded"
-            ]
+        case .getAllBeers:
+            return .get
         }
     }
 
     private var parameters: [String: Any] {
         switch self {
-        case let .authenticate(user, password, empID):
-            return [
-                "Nome": user,
-                "Senha": password,
-                "Emp_ID": empID
-            ]
+        case .getAllBeers:
+            return [:]
         }
     }
 

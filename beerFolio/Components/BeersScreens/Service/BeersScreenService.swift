@@ -8,7 +8,7 @@
 import Foundation
 
 protocol BeersScreenServiceProtocol {
-//    func getAuthorizations(onSuccess: @escaping (Result<AuthorizationModel, OrionError>) -> Void)
+    func getAllBeers(onSuccess: @escaping (Result<BeersModel, OrionError>) -> Void)
 }
 
 final class BeersScreenService: BeersScreenServiceProtocol {
@@ -18,8 +18,7 @@ final class BeersScreenService: BeersScreenServiceProtocol {
     init(network: NetworkProtocol = MoyaManager()) {
         self.network = network
     }
-    
-//    func getAuthorizations(onSuccess: @escaping (Result<AuthorizationModel, OrionError>) -> Void) {
-//        network.request(AuthorizationEndpoint.getAuthorizations, expectedType: AuthorizationModel.self, onSuccess)
-//    }
+    func getAllBeers(onSuccess: @escaping (Result<BeersModel, OrionError>) -> Void) {
+        network.request(AllBeersEndpoint.getAllBeers, expectedType: BeersModel.self, onSuccess)
+    }
 }
