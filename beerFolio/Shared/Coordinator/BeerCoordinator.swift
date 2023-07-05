@@ -39,13 +39,13 @@ final class BeerCoordinator {
         let navigationController = UINavigationController(rootViewController: viewController)
         self.switchRootViewController(rootViewController: navigationController, animated: animated, completion: nil)
     }
-//    
-//    func changeToTabBar() {
-//        let animated = self.window != nil
-//        let viewController = TabBarController()
-//        let navigationController = UINavigationController(rootViewController: viewController)
-//        self.switchRootViewController(rootViewController: navigationController, animated: animated, completion: nil)
-//    }
+    
+    func changeToTabBar() {
+        let animated = self.window != nil
+        let viewController = TabBarController()
+        let navigationController = UINavigationController(rootViewController: viewController)
+        self.switchRootViewController(rootViewController: navigationController, animated: animated, completion: nil)
+    }
 }
 
 private extension BeerCoordinator {

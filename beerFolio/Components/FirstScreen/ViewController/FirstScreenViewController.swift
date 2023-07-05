@@ -43,6 +43,10 @@ final class FirstScreenViewController: BaseViewController {
 }
 
 extension FirstScreenViewController: FirstScreenViewDelegate {
+    func startButtonTapped() {
+        BeerCoordinator().changeToTabBar()
+    }
+    
     func changeLabels() {
         guard let visibleCell = viewInstance?.labelsCollectionView.visibleCells else { return }
         for cell in visibleCell {

@@ -11,6 +11,7 @@ import SwiftUI
 
 protocol FirstScreenViewDelegate {
     func changeLabels()
+    func startButtonTapped()
 }
 
 final class FirstScreenView: UIView {
@@ -78,6 +79,8 @@ final class FirstScreenView: UIView {
         attributedString.append(NSAttributedString(attachment: imageAttachment))
         
         button.setAttributedTitle(attributedString, for: .normal)
+        
+        button.addTarget(self, action: #selector(buttonStart), for: .touchUpInside)
 
         return button
     }()
@@ -112,6 +115,10 @@ final class FirstScreenView: UIView {
     
     @objc func scrollAutomatically(_ timer1: Timer) {
         delegate?.changeLabels()
+    }
+    
+    @objc func buttonStart() {
+        delegate?.startButtonTapped()
     }
     
     private func setupConstraints() {
