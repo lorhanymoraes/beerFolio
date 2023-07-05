@@ -20,9 +20,9 @@ class ViewModelContainer {
         return .init(router: view.router)
     }
     
-//    func getLoginViewModel(view: BaseViewController) -> LoginViewModel {
-//        return .init(router: view.router, services: LoginServices())
-//    }
+    func getBeersViewModel(view: BaseViewController) -> BeersScreensViewModel {
+        return .init(router: view.router, services: BeersScreenService())
+    }
 //    
 //    func getMenuViewModel(view: BaseViewController) -> MenuViewModel {
 //        return .init(router: view.router)

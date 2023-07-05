@@ -51,6 +51,13 @@
 		0D4D832F2A4FAE030062EFCB /* FirstScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4D832E2A4FAE030062EFCB /* FirstScreenView.swift */; };
 		0D4D83312A4FAE0E0062EFCB /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4D83302A4FAE0E0062EFCB /* FirstScreenViewController.swift */; };
 		0D4D83342A4FAE2B0062EFCB /* FirstScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4D83332A4FAE2B0062EFCB /* FirstScreenCollectionViewCell.swift */; };
+		0D75E0A12A54F86800D007B9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D75E0A02A54F86800D007B9 /* TabBarController.swift */; };
+		0D75E0A72A54FD3100D007B9 /* BeersScreensView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D75E0A62A54FD3100D007B9 /* BeersScreensView.swift */; };
+		0D75E0A92A54FD4200D007B9 /* BeersScreensViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D75E0A82A54FD4200D007B9 /* BeersScreensViewModel.swift */; };
+		0D75E0AB2A54FD4F00D007B9 /* BeersScreensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D75E0AA2A54FD4F00D007B9 /* BeersScreensViewController.swift */; };
+		0D75E0AE2A54FD6500D007B9 /* BeersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D75E0AD2A54FD6500D007B9 /* BeersModel.swift */; };
+		0D75E0B12A54FF0400D007B9 /* ExempleBeersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D75E0B02A54FF0400D007B9 /* ExempleBeersCollectionViewCell.swift */; };
+		0D75E0B42A55005600D007B9 /* BeersScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D75E0B32A55005600D007B9 /* BeersScreenService.swift */; };
 		B3CBD1169BF7ECF4A2B010BC /* Pods_beerFolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A09B81929BEBE0860D78D6 /* Pods_beerFolio.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +108,13 @@
 		0D4D832E2A4FAE030062EFCB /* FirstScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenView.swift; sourceTree = "<group>"; };
 		0D4D83302A4FAE0E0062EFCB /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
 		0D4D83332A4FAE2B0062EFCB /* FirstScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenCollectionViewCell.swift; sourceTree = "<group>"; };
+		0D75E0A02A54F86800D007B9 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		0D75E0A62A54FD3100D007B9 /* BeersScreensView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersScreensView.swift; sourceTree = "<group>"; };
+		0D75E0A82A54FD4200D007B9 /* BeersScreensViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersScreensViewModel.swift; sourceTree = "<group>"; };
+		0D75E0AA2A54FD4F00D007B9 /* BeersScreensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersScreensViewController.swift; sourceTree = "<group>"; };
+		0D75E0AD2A54FD6500D007B9 /* BeersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersModel.swift; sourceTree = "<group>"; };
+		0D75E0B02A54FF0400D007B9 /* ExempleBeersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExempleBeersCollectionViewCell.swift; sourceTree = "<group>"; };
+		0D75E0B32A55005600D007B9 /* BeersScreenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersScreenService.swift; sourceTree = "<group>"; };
 		80A09B81929BEBE0860D78D6 /* Pods_beerFolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beerFolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B3952BE64AEF7B7D803905 /* Pods-beerFolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beerFolio.debug.xcconfig"; path = "Target Support Files/Pods-beerFolio/Pods-beerFolio.debug.xcconfig"; sourceTree = "<group>"; };
 		E140490B9FE729F61C5179B7 /* Pods-beerFolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beerFolio.release.xcconfig"; path = "Target Support Files/Pods-beerFolio/Pods-beerFolio.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +189,8 @@
 		0D4D82902A4A47580062EFCB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0D75E0A22A54FCFE00D007B9 /* BeersScreens */,
+				0D75E09F2A54F85C00D007B9 /* TabBar */,
 				0D4D83282A4FADB70062EFCB /* FirstScreen */,
 				0D4D82E92A4A4F740062EFCB /* FakeSplashScreen */,
 			);
@@ -453,6 +469,75 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		0D75E09F2A54F85C00D007B9 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0D75E0A02A54F86800D007B9 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		0D75E0A22A54FCFE00D007B9 /* BeersScreens */ = {
+			isa = PBXGroup;
+			children = (
+				0D75E0B22A55004400D007B9 /* Service */,
+				0D75E0AC2A54FD5700D007B9 /* Model */,
+				0D75E0A52A54FD2200D007B9 /* ViewController */,
+				0D75E0A42A54FD1900D007B9 /* ViewModel */,
+				0D75E0A32A54FD0800D007B9 /* View */,
+			);
+			path = BeersScreens;
+			sourceTree = "<group>";
+		};
+		0D75E0A32A54FD0800D007B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D75E0A62A54FD3100D007B9 /* BeersScreensView.swift */,
+				0D75E0AF2A54FE9B00D007B9 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0D75E0A42A54FD1900D007B9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0D75E0A82A54FD4200D007B9 /* BeersScreensViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0D75E0A52A54FD2200D007B9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0D75E0AA2A54FD4F00D007B9 /* BeersScreensViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0D75E0AC2A54FD5700D007B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D75E0AD2A54FD6500D007B9 /* BeersModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0D75E0AF2A54FE9B00D007B9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0D75E0B02A54FF0400D007B9 /* ExempleBeersCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0D75E0B22A55004400D007B9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0D75E0B32A55005600D007B9 /* BeersScreenService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		50BC7F6368BCD2011FCFD852 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -589,17 +674,21 @@
 				0D4D82DD2A4A4D860062EFCB /* Endpoint.swift in Sources */,
 				0D4D82E02A4A4DE50062EFCB /* Router.swift in Sources */,
 				0D4D82A42A4A49F70062EFCB /* Codable+Helpers.swift in Sources */,
+				0D75E0AB2A54FD4F00D007B9 /* BeersScreensViewController.swift in Sources */,
 				0D4D82D72A4A4D690062EFCB /* BeerValidationError.swift in Sources */,
 				0D4D829E2A4A49920062EFCB /* ViewModelContainer.swift in Sources */,
+				0D75E0A92A54FD4200D007B9 /* BeersScreensViewModel.swift in Sources */,
 				0D4D82B72A4A4AC50062EFCB /* AppEnvionment.swift in Sources */,
 				0D4D82C62A4A4C330062EFCB /* MoyaManager.swift in Sources */,
 				0D4D82E52A4A4E200062EFCB /* CacheProtocol.swift in Sources */,
 				0D4D829B2A4A493E0062EFCB /* BaseViewController.swift in Sources */,
 				0D4D82A62A4A4A030062EFCB /* UIView+Extensions.swift in Sources */,
+				0D75E0B12A54FF0400D007B9 /* ExempleBeersCollectionViewCell.swift in Sources */,
 				0D4D82BE2A4A4B920062EFCB /* StorageKey.swift in Sources */,
 				0D4D82B32A4A4AB10062EFCB /* Dynamic.swift in Sources */,
 				0D4D82972A4A48E80062EFCB /* ServiceLocator.swift in Sources */,
 				0D4D827C2A4A46BF0062EFCB /* AppDelegate.swift in Sources */,
+				0D75E0A12A54F86800D007B9 /* TabBarController.swift in Sources */,
 				0D4D82DB2A4A4D800062EFCB /* BeerError.swift in Sources */,
 				0D4D82E32A4A4E190062EFCB /* RouterProtocol.swift in Sources */,
 				0D4D82BC2A4A4B850062EFCB /* CacheManager.swift in Sources */,
@@ -607,9 +696,12 @@
 				0D4D82B52A4A4ABA0062EFCB /* BeerConstants.swift in Sources */,
 				0D4D82EB2A4A4FA40062EFCB /* FakeSplashScreenViewController.swift in Sources */,
 				0D4D83312A4FAE0E0062EFCB /* FirstScreenViewController.swift in Sources */,
+				0D75E0B42A55005600D007B9 /* BeersScreenService.swift in Sources */,
 				0D4D82AC2A4A4A2C0062EFCB /* UIColor+Extensions.swift in Sources */,
 				0D4D83342A4FAE2B0062EFCB /* FirstScreenCollectionViewCell.swift in Sources */,
 				0D4D82AA2A4A4A230062EFCB /* UITableViewCell+Extensions.swift in Sources */,
+				0D75E0A72A54FD3100D007B9 /* BeersScreensView.swift in Sources */,
+				0D75E0AE2A54FD6500D007B9 /* BeersModel.swift in Sources */,
 				0D4D827E2A4A46BF0062EFCB /* SceneDelegate.swift in Sources */,
 				0D4D82CC2A4A4CA20062EFCB /* AllBeersEndpoint.swift in Sources */,
 				0D4D82B12A4A4AA80062EFCB /* ViewPreview.swift in Sources */,

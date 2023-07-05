@@ -17,12 +17,12 @@ class TabBarController: UITabBarController {
     }
     
     private func setupTabBar() {
-//        let menuViewControler = MenuViewController()
-//        menuViewControler.viewModel = ViewModelContainer.shared.getMenuViewModel(view: menuViewControler)
+        let beersViewControler = BeersScreensViewController()
+        beersViewControler.viewModel = ViewModelContainer.shared.getBeersViewModel(view: beersViewControler)
 //        let configurationViewControler = ConfigurationViewController()
 //        configurationViewControler.viewModel = ViewModelContainer.shared.getConfigurationViewModel(view: configurationViewControler)
         
-//        self.setViewControllers([menuViewControler, configurationViewControler], animated: false)
+        self.setViewControllers([beersViewControler], animated: false)
         self.tabBar.backgroundColor = .white
         self.tabBar.isTranslucent = true
         self.tabBar.tintColor = .orange
@@ -30,8 +30,8 @@ class TabBarController: UITabBarController {
         guard let items = tabBar.items else { return }
         items[0].title = "Beers"
         items[0].image = UIImage(systemName: "mug")
-        
-        items[1].title = "Configurations"
-        items[1].image = UIImage(systemName: "gearshape")
+//        
+//        items[1].title = "Configurations"
+//        items[1].image = UIImage(systemName: "gearshape")
     }
 }

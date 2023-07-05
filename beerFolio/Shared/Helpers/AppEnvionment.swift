@@ -9,22 +9,15 @@ import Foundation
 
 enum AppEnvironment {
     static var websiteURL: String {
-        return "http://dploja.posseidom.com:8484"
+        return "https://api.punkapi.com/v2/"
     }
 
     static var baseURL: String {
-//#if TEST
-//        return "http://192.168.9.111"
-//#elseif TEST
-//        return "http://dploja.posseidom.com:8484"
-//#else
-        return "http://dploja.posseidom.com:8484"
-//#endif
-        
+        return "https://api.punkapi.com/v2/"
     }
 
     static var bundleId: String {
-        return "com.dpsistemas.Orion"
+        return "com.projects.lorhanymoraes.beerFolio"
     }
 
     static var appVersion: String {
